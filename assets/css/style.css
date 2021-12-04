@@ -169,7 +169,15 @@ main .countryInfo > .info .countryTag .miniCountryList .mini {
   padding: 10px;
   border-radius: 5px;
 }
-
+/* footer style start */
+footer {
+  text-align: center;
+}
+footer a {
+  color: red;
+  text-decoration: underline;
+}
+/* footer style end */
 /* single page style start */
 /* loader style start  */
 .loader {
