@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Where in the world</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Where in the world?</h1>
+        <button id="siteStyleBtn"><i class="far fa-moon"></i>Dark Mode</button>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="search">
+          <div class="searchInput">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="textSearch"
+              placeholder="Search a country..."
+            />
+          </div>
+          <select id="selectSearch">
+            <option value="" selected>filter by region</option>
+            <option value="AU">Africa</option>
+            <option value="USAN">America</option>
+            <option value="ASEAN">Asia</option>
+            <option value="EFTA">European Free Trade Association</option>
+            <option value="EEU">Eurasian Economic Union</option>
+            <option value="CAIS">Central American Integration System</option>
+          </select>
+        </section>
+        <section id="country">
+          <div class="loader"></div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/siteStyle.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-Mode-Elements-color: hsl(209, 23%, 22%);
+  --Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Light-Mode-Text: hsl(200, 15%, 8%);
+  --Light-Mode-Input: hsl(0, 0%, 52%);
+  --Light-Mode-Background: hsl(0, 0%, 98%);
+  --Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--Dark-Mode-Text-Light-Mode-Elements);
+  background-color: #202d36;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+/* header style start */
+header {
+  height: 50px;
+  background-color: #2b3743;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 24px;
+}
+header button {
+  color: var(--Dark-Mode-Text-Light-Mode-Elements);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* header style end */
+/* main style  start */
+main .search {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+main .search .searchInput {
+  background-color: #2b3743;
+  height: 43px;
+  width: 372px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+main .search .searchInput i {
+  margin-right: 15px;
+}
+main .search .searchInput input {
+  background-color: transparent;
+  color: white;
+  border: none;
+  height: 35px;
+  width: 100%;
+}
+main .search select {
+  width: 207px;
+  background-color: #2b3743;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 5px;
+}
+
+main #country {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+main #country > .card {
+  width: 20%;
+  background-color: #2b3743;
+  min-width: 240px;
+  margin-bottom: 40px;
+  margin-right: 46px;
+}
+main #country .card > .img {
+  width: 100%;
+}
+main #country .card > .img img {
+  width: 100%;
+}
+main #country .card > .info {
+  padding: 20px;
+}
+main #country .card > .info p span {
+  font-weight: bold;
+}
+/* main style  end */
+/* single page style start */
+main .back {
+  margin-top: 40px;
+  width: 95px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b3743;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #2b3743;
+  text-decoration: none;
+  color: white;
+}
+main .back i {
+  margin-right: 6px;
+}
+main .countryInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+main .countryInfo > .img {
+  width: 50%;
+  min-width: 300px;
+}
+main .countryInfo > .img img {
+  width: 100%;
+}
+main .countryInfo > .info {
+  width: 50%;
+  padding: 10%;
+}
+
+main .countryInfo > .info .infoList {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+main .countryInfo > .info .infoList p {
+  margin-bottom: 5px;
+}
+main .countryInfo > .info .infoList p span {
+  font-weight: bold;
+}
+
+main .countryInfo > .info .countryTag {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .countryInfo > .info .countryTag .miniCountryList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .countryInfo > .info .countryTag .miniCountryList .mini {
+  background-color: #2b3743;
+  margin: 0 6px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* single page style start */
+/* loader style start  */
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* loader style end */
+/* media screen style start */
+@media only screen and (max-width: 660px) {
+  /* index page style start */
+  main .search {
+    flex-direction: column;
+    height: 100px;
+  }
+  /* index page style end */
+  /* single page style start */
+  main .countryInfo > .img {
+    width: 100%;
+  }
+  main .countryInfo > .info {
+    width: 100%;
+  }
+  /* single page style end */
+}
+/* media screen style end */
