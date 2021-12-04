@@ -13,7 +13,7 @@ const getDataFromApi = async () => {
   countList.forEach((cont) => {
     country.innerHTML += `<div class="card">
      <div class="img">
-       <a href="./single.html?name=${cont.name}"><img src="${cont.flag}" alt=""></a>
+       <a href="./single.html?name=${cont.name}" aria-label='${cont.name}' ><img src="${cont.flag}" alt=""></a>
      </div>
      <div class="info">
          <h2>${cont.name}</h2>
@@ -43,7 +43,7 @@ textSearch.addEventListener("input", async (e) => {
   for (let i = 0; i < counter; i++) {
     country.innerHTML += `<div class="card">
      <div class="img">
-        <a href='./single.html?name=${finalData[i].name}'> <img src="${finalData[i].flag}" alt=""></a>
+        <a href='./single.html?name=${finalData[i].name}' aria-label='${finalData[i].name}' > <img src="${finalData[i].flag}" alt=""></a>
      </div>
      <div class="info">
          <h2>${finalData[i].name}</h2>
@@ -71,7 +71,7 @@ selectSearch.addEventListener("change", async () => {
   finalData.forEach((singleCountry) => {
     country.innerHTML += `<div class="card">
      <div class="img">
-        <a href='./single.html?name=${singleCountry.name}' > <img src="${singleCountry.flag}" alt=""></a>
+        <a href='./single.html?name=${singleCountry.name}' aria-label='${singleCountry.name}' > <img src="${singleCountry.flag}" alt=""></a>
      </div>
      <div class="info">
          <h2>${singleCountry.name}</h2>
